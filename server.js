@@ -1,10 +1,15 @@
-const express = require('express')
-const res = require('express/lib/response')
-const app = express()
-app.set('view engine', 'ejs')
+const express = require("express");
+const res = require("express/lib/response");
+const app = express();
+app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-    res.render('code-display')
-})
+  const code =
+    `Welcome to text-share! 
 
-app.listen(3000)
+# Use the commands in the top right corner
+  to create a new file to share with others`;
+  res.render("code-display", { code });
+});
+
+app.listen(3000);
