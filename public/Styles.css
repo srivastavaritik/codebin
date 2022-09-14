@@ -42,3 +42,26 @@ textarea{
 .buttons-wrapper:hover{
     opacity: 1;
 }
+.logo{
+    font-size:2rem;
+    text-decoration: none;
+    color: wheat;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+.logo:hover{
+    text-decoration: underline;
+}
+.buttons{
+    display: flex;
+    margin-top: .5rem;
+    justify-content: center;
+}
+.buttons > * + * {
+    margin-left: .25rem;
+}
+.btn{
+    cursor: pointer;
+    
+}
