@@ -2,6 +2,11 @@
     <a href="/" class="logo">CodeBin</a>
     <div class="buttons">
         <a href="/new" class="btn">New</a>
+        <% if(locals.canSave) { %>
         <button class="btn" type="submit">Save</button>
-    </div>
+        <% } %>
+        <% if(locals.id!=null) { %>
+            <a href="/<%=locals.id %>/duplicate" class="btn" target="_blank">Duplicate</a>
+            <% } %>
+        </div>
 </div>

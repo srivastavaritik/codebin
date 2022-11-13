@@ -38,12 +38,23 @@ app.post('/save', async(req,res) => {
   console.log(value)
 })
 
+app.get('/:id/duplicate', async(req,res)=>{
+  const id = req.params.id;
+  try {
+    const document = await Document.findById(id);
+
+    res.render("new", { value: document.value });
+  } catch (error) {
+    res.redirect(`/${id}`);
+  }
+})
+
 app.get('/:id', async(req, res) => {
   const id = req.params.id
   try {
     const document = await Document.findById(id)
 
-    res.render('code-display',{code:  document.value})
+    res.render('code-display',{code:  document.value, id})
   } catch (error) {
     res.redirect('/')
   }
