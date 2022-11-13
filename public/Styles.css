@@ -63,5 +63,12 @@ textarea{
 }
 .btn{
     cursor: pointer;
-    
+    background:none;
+    border: 1px solid #0c1118;
+    color: #0c1118;
+    border-radius: .25rem;
+    padding: .25rem .5rem;
+    transition: background-color 200ms ease-in-out;
+    display: inline-block;
+    text-decoration: none;
 }
