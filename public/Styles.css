@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 body {
+  font-family: 'Poppins', sans-serif;
   background-color: #0c1118;
   margin: 0;
 }
@@ -57,7 +59,7 @@ textarea {
 }
 .buttons {
   display: flex;
-  margin-top: 0.5rem;
+  margin: 0.5rem;
   justify-content: left;
 }
 .buttons > * + * {
